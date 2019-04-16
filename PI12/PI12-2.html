@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			.pincode-input-container {
+				display:inline-block;
+			}
+			.pincode-input-container input.first {
+				border-top-right-radius:0px;
+				border-bottom-right-radius:0px;
+			}
+			.pincode-input-container input.last {
+				border-top-left-radius:0px;
+				border-bottom-left-radius:0px;
+				border-left-width:0px;
+			}
+			.pincode-input-container input.mid {
+				border-radius:0px;
+				border-left-width:0px;
+			}
+			.pincode-input-text, .form-control.pincode-input-text {
+				width:35px;
+				float:left;
+			}
+			.pincode-input-error{
+				clear:both;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<p>
+							Please Note:<br/>
+							Once pin generated,Pin length cannot be changed.<br/>
+							Pin length will apply to all eagle panels for the customer.
+							<br/>
+								<div class="form-group col-md-6">
+									<label for="">Pin Length ( Optional)</label>
+									<select class="form-control">
+										<option value="">4</option>
+										<option value="">5</option>
+										<option value="">6</option>
+									</select>
+								</div>
+						</p>
+						<hr/>
+						<h3>Set Master Pin</h3>
+						<form action="" method="POST" role="form">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<div class="form-group col-md-6">
+									<label for="">New Pin</label><br/>
+									<div class="pincode-input-container">
+										<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text first">
+										<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid">
+										<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid">
+										<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid">
+										<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid">
+										<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text last">
+										<div class="text-danger pincode-input-error"></div></div>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="">Confirm Pin</label><br/>
+										<div class="pincode-input-container">
+											<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text first">
+											<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid">
+											<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid">
+											<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid">
+											<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid">
+											<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text last">
+											<div class="text-danger pincode-input-error"></div></div>
+									</div>
+							</div>
+							<h3>Set Installer Pin</h3>
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<div class="form-group col-md-6">
+									<label for="">New Pin</label><br/>
+									<div class="pincode-input-container">
+										<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text first">
+										<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid">
+										<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid">
+										<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid">
+										<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid">
+										<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text last">
+										<div class="text-danger pincode-input-error">Pin Mismatch</div></div>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="">Confirm Pin</label><br/>
+										<div class="pincode-input-container">
+											<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text first">
+											<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid">
+											<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid">
+											<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid">
+											<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text mid">
+											<input type="password" maxlength="1" autocomplete="off" class="form-control pincode-input-text last">
+											<div class="text-danger pincode-input-error"></div></div>
+									</div>
+							</div>
+							
+						
+						</form>
+		</div>
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</body>
+</html>

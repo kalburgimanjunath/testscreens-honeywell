@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Synchronisation of off-line configuration</title>
+
+		<!-- Bootstrap CSS -->
+		<!-- <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"> -->
+		<link rel="stylesheet" href="https://aerocontent.honeywell.com/aero/portal/css/hon-dls.min.css" />
+		<script type="text/javascript" src="https://aerocontent.honeywell.com/aero/portal/js/hon-dls.min.js"></script>
+		<link href="css/sprite.css" rel="stylesheet" type="text/css" media="all"/>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+			ul.dropdown-cart{
+			    min-width:250px;
+			    margin-right: 14px;
+			    border: 1px solid #e0e0e0;
+			    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.28);
+			    max-height: 300px;
+			    overflow-y: auto;
+			}
+ul.dropdown-cart li .item{
+    display:block;
+    padding:16px 20px;
+    border-bottom:1px solid #e7e7e7;
+    /*box-shadow: 0 2px 4px 0 rgba(25,20,20,0.24);*/
+}
+
+
+ul.dropdown-cart li .item:hover{
+    background-color: #ECF6FD;
+
+}
+ul.dropdown-cart li .item:after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+ul.dropdown-cart li .item-left{
+    float:left;
+}
+ul.dropdown-cart li .item-left img,
+ul.dropdown-cart li .item-left span.item-info{
+    float:left;
+}
+ul.dropdown-cart li .item-left span.item-info{
+    margin-left:10px;   
+}
+ul.dropdown-cart li .item-left span.item-info span{
+    display:block;
+}
+ul.dropdown-cart li .item-right{
+    float:right;
+}
+ul.dropdown-cart li .item-right button{
+    margin-top:14px;
+}
+
+.pink{
+	background: #9B59B6;
+	color: #fff;
+	font-size: 12px;
+	line-height: 15px;
+	padding: 3px 6px;
+}
+
+ul li.header{
+	padding: 12px 20px;
+	border-bottom:1px solid #e7e7e7;
+	background-color: #F7F7F7;
+}
+
+.failed{
+	color: #F37021;
+}
+
+.online{
+	color: #628B2C;
+}
+		</style>
+		
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container-fluid">
+		         <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-left">
+							<li><span class="eagle eagle_hamburger"></span> Dashboard</li>
+						</ul>
+
+						<ul class="nav navbar-nav navbar-right one">
+							<li class="dropdown">
+				                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span class="eagle eagle_Controller_offline"></span></a>
+				                <ul class="dropdown-menu dropdown-cart" role="menu">
+				                	<li class="header">Controller Status
+				                	</li>
+					              <li>
+					                  <span class="item">
+					                    <span class="item-left">
+					                        <span class="eagle eagle_Controller_offline pull-left"></span>
+					                        <span class="item-info">
+					                            <span>Eagle Controller Name</span>
+					                        </span>
+					                        <span class="item-info">
+						                        <button class="btn btn-xs pink pull-right">Installer Mode</button>
+						                    </span>
+					                    </span>
+					                    
+					                </span>
+					              </li>
+					              <li>
+					                  <span class="item">
+					                    <span class="item-left">
+					                        <span class="eagle eagle_Controller_offline pull-left"></span>
+					                        <span class="item-info">
+					                            <span>Eagle Controller Name</span>
+					                        </span>
+					                        <span class="item-info">
+						                        <span>Syncing…</span>
+						                    </span>
+					                    </span>
+					                    
+					                </span>
+					              </li>
+					              <li>
+					                  <span class="item">
+					                    <span class="item-left">
+					                        <span class="eagle eagle_Controller_offline pull-left"></span>
+					                        <span class="item-info">
+					                            <span>Eagle Controller Name</span>
+					                        </span>
+					                        <span class="item-info failed">
+						                        <span>OUT OF SYNC</span>
+						                    </span>
+					                    </span>
+					                    
+					                </span>
+					              </li>
+					              <li>
+					                  <span class="item">
+					                    <span class="item-left">
+					                        <span class="eagle eagle_Controller_offline pull-left"></span>
+					                        <span class="item-info">
+					                            <span>Eagle Controller Name</span>
+					                        </span>
+					                        <span class="item-info online">
+						                        <span>ONLINE</span>
+						                    </span>
+					                    </span>
+					                    
+					                </span>
+					              </li>
+					              <li>
+					                  <span class="item">
+					                    <span class="item-left">
+					                        <span class="eagle eagle_Controller_offline pull-left"></span>
+					                        <span class="item-info">
+					                            <span>Eagle Controller Name</span>
+					                        </span>
+					                        <span class="item-info">
+						                        <button class="btn btn-xs btn-pink pull-right">Installer Mode</button>
+						                    </span>
+					                    </span>
+					                    
+					                </span>
+					              </li>
+					              <li>
+					                  <span class="item">
+					                    <span class="item-left">
+					                        <span class="eagle eagle_Controller_offline pull-left"></span>
+					                        <span class="item-info">
+					                            <span>Eagle Controller Name</span>
+					                        </span>
+					                        <span class="item-info">
+						                        <button class="btn btn-xs btn-pink pull-right">Installer Mode</button>
+						                    </span>
+					                    </span>
+					                    
+					                </span>
+					              </li>
+					              <li>
+					                  <span class="item">
+					                    <span class="item-left">
+					                        <span class="eagle eagle_Controller_offline pull-left"></span>
+					                        <span class="item-info">
+					                            <span>Eagle Controller Name</span>
+					                        </span>
+					                        <span class="item-info">
+						                        <button class="btn btn-xs btn-pink pull-right">Installer Mode</button>
+						                    </span>
+					                    </span>
+					                    
+					                </span>
+					              </li>
+					          </ul>
+				            </li>
+						</ul>
+					</div>
+				</nav>
+		  </div>
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+		<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.11.0/css/bootstrap-tour.min.css" rel="stylesheet"> -->
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.11.0/js/bootstrap-tour-standalone.js"></script>
+		<script>
+			// Instance the tour
+var tour = new Tour({
+  steps: [
+  {
+    element: ".one",
+    title: "Welcome",
+    content: "Welcome to our app, take this tour to be familirized with it."
+  },
+      {
+    element: ".two",
+    title: "This Image",
+    content: "In this application we generate random placeholder images for any case."
+  }  
+],
+  backdrop: true,
+  storage: false
+});
+
+tour.init();
+
+tour.start();
+			</script>
+	</body>
+</html>

@@ -1,0 +1,644 @@
+
+
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="https://ispbrn.honeywell.com/MPC/bundles/Styles/app.min.css?v=4.20.00" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			
+.failed{
+	color: #F37021;
+}
+
+.online{
+	color: #628B2C;
+}
+
+.pink{
+	background: #9B59B6 !important;
+	color: #fff !important;
+}
+
+.outofsync{
+	background-color: #F37021;
+	padding: 6px 24px 4px;
+	color: #fff;
+}
+		</style>
+	</head>
+	<body> 
+		<div class="controller-root page-root" data-bind="busyIndicator: {show: $data.IsLoading, blockAll: true},visible: $data.Controllers().length>0" style="width: 30%;
+    position: fixed;
+    height: 100%;">
+        <div class="controllerView">
+            <div class="netaxslist cardlistview isptabs">
+                <span class="ispicon ispicon_collapse inverse pull-left" title="Expand/Collapse" data-bind="click: $data.toggleMenu"></span>
+                <h1 class="isppagetitle">
+                    <span class="isppagetitle mar-l0">Controllers</span>
+                    <span class="pull-right">
+                                <a class="ispicon ispicon_plus cv-add-icon" title="Add New" data-bind="click: $data.addController"></a>                        
+                                                            <span class="ispicon ispicon_delete cv-delete-icon" title="Delete" data-bind="click: $data.deleteController"></span>
+                    </span>
+
+                </h1>
+                <div>
+                    <div class="col-md-12 listStickyHeader pad-l20 border-top">
+                        <span class="s1" data-bind="text:$data.Controllers().length">3</span>
+                        <!-- ko if: $data.Controllers().length > 1 -->
+                        <span class="s2">Controllers </span>
+                        <!-- /ko -->
+                        <!-- ko ifnot: $data.Controllers().length > 1 --><!-- /ko -->
+                    </div>
+
+                    <ul class="list-group listcontainer">
+
+                        <!-- ko foreach: $data.Controllers -->
+                        <li class="list-group-item active" data-bind="click: $root.showOverview, css: {'active': $data.IsSelected()}">
+                            <div class="isplisticon">
+                                <span class="ispicon ispicon_Controller_offline" data-bind="css: $data.Icon"></span>
+                            </div>
+                            <div class="col-md-10 controllerList">
+                                <span class="name" data-bind="text:$data.DeviceName">001F57210001</span>
+                                <br>
+                                <div class="controllersec">
+                                    <div class="c2" data-bind="text:$data.ModelNo">HEN04</div>
+                                    <span class="status pink" data-bind="text:$data.StatusText, css: $data.StatusStyle">Installer Mode</span>
+                                </div>
+                            </div>
+                            <div class="clearfix pad-b2"></div>
+                        </li>
+                        
+                        <li class="list-group-item" data-bind="click: $root.showOverview, css: {'active': $data.IsSelected()}">
+                            <div class="isplisticon">
+                                <span class="ispicon ispicon_Controller_default" data-bind="css: $data.Icon"></span>
+                            </div>
+                            <div class="col-md-10 controllerList">
+                                <span class="name" data-bind="text:$data.DeviceName">NS123Panel_1</span>
+                                <br>
+                                <div class="controllersec">
+                                    <div class="c2" data-bind="text:$data.ModelNo">NetAXS-123</div>
+                                    <span class="" data-bind="text:$data.StatusText, css: $data.StatusStyle">SYNCING…</span>
+                                </div>
+                            </div>
+                            <div class="clearfix pad-b2"></div>
+                        </li>
+                        
+                        <li class="list-group-item" data-bind="click: $root.showOverview, css: {'active': $data.IsSelected()}">
+                            <div class="isplisticon">
+                                <span class="ispicon ispicon_Controller_default" data-bind="css: $data.Icon"></span>
+                            </div>
+                            <div class="col-md-10 controllerList">
+                                <span class="name" data-bind="text:$data.DeviceName">FLEX-020_1</span>
+                                <br>
+                                <div class="controllersec">
+                                    <div class="c2" data-bind="text:$data.ModelNo">FLEX-020</div>
+                                    <span class="failed" data-bind="text:$data.StatusText, css: $data.StatusStyle">OUT OF SYNC</span>
+                                </div>
+                            </div>
+                            <div class="clearfix pad-b2"></div>
+                        </li>
+                        <li class="list-group-item" data-bind="click: $root.showOverview, css: {'active': $data.IsSelected()}">
+                            <div class="isplisticon">
+                                <span class="ispicon ispicon_Controller_default" data-bind="css: $data.Icon"></span>
+                            </div>
+                            <div class="col-md-10 controllerList">
+                                <span class="name" data-bind="text:$data.DeviceName">FLEX-020_1</span>
+                                <br>
+                                <div class="controllersec">
+                                    <div class="c2" data-bind="text:$data.ModelNo">FLEX-020</div>
+                                    <span class="online" data-bind="text:$data.StatusText, css: $data.StatusStyle">ONLINE</span>
+                                </div>
+                            </div>
+                            <div class="clearfix pad-b2"></div>
+                        </li>
+                        <!-- /ko -->
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="vistagalaxyoverview-view" class="controllerView show" data-url="/MPC/VistaGalaxyConfig">
+    <!-- CONTROLLER OVERVIEW-->
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 listOverview ControllerOverview isptabs pull-left" style="width: 69%;">
+        <form id="receiverDataGrid" data-bind="visible:$data.controllerDetailsModel.ControllerOverview.DataLoaded" novalidate="novalidate" style="">
+            <div class="row isptabs">
+                <div class="row overviewHeader">
+                    <h2 class="isppagetitle">
+                        <span data-bind="text:$data.controllerDetailsModel.ControllerOverview.Name">FLEX-020_1</span>
+
+                            <span class="pull-right">
+                                <span class="ispicon ispicon_edit" data-toggle="tooltip" title="Edit" data-bind="event:{click: $data.editController}"></span>
+                            </span>
+
+                    </h2>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#overview" aria-controls="home" role="tab" data-toggle="tab" data-bind="click:loadOverviewData">Overview</a></li>
+                        <li role="presentation"><a href="#settings" aria-controls="profile" role="tab" data-toggle="tab" data-bind="visible:!$data.controllerDetailsModel.ControllerOverview.HiddenModelTypeTabs(),click:loadSettingsData" style="display: none;">Settings</a></li>
+                        <li role="presentation"><a href="#commsPath" aria-controls="profile" role="tab" data-toggle="tab" data-bind="visible:!$data.controllerDetailsModel.ControllerOverview.HiddenModelTypeTabs(),click:loadCommunicationPathData" style="display: none;">Communication Path</a></li>
+                        <li role="presentation"><a href="#report" aria-controls="profile" role="tab" data-toggle="tab" data-bind="visible:!$data.controllerDetailsModel.ControllerOverview.HiddenModelTypeTabs(),click:loadReportsData" style="display: none;">Report</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div id="overview" class="tab-pane active">
+                        <div class="row scroll-y overviewTab">
+                            <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 content">
+                                <div class="row">
+                                    <div class="cardWrapper col-md-4">
+                                        <!-- CONTROLLER DETAILS START-->
+                                        <div class="panel panel-info white controllerdetails controllerStatWrapper">
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title">
+                                                    <p data-bind="text:$data.controllerDetailsModel.ControllerOverview.Name">FLEX-020_1</p>
+                                                    <span data-bind="text:$data.controllerDetailsModel.ControllerOverview.Description"></span>
+                                                </h3>
+                                            </div>
+                                            <div class="controllerStatus outofsync" data-bind="css:$data.controllerDetailsModel.ControllerOverview.DeviceStatusCssClass,text:$data.controllerDetailsModel.ControllerOverview.DisplayDeviceStatus">OUT OF SYNC</div>
+                                            <div class="panel-body">
+                                                <div>
+                                                    <label> Time Zone</label>
+                                                    <p data-bind="text: $data.controllerDetailsModel.ControllerOverview.TimeZone">(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi</p>
+                                                    <span data-bind="text:$data.controllerDetailsModel.ControllerOverview.DeviceDateTime" style="display: none;"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- CONTROLLER DETAILS END-->
+                                        <!-- CONTROLLER STATUS START-->
+                                        <div class="panel panel-info white controllerdetails controllerConn" data-bind="visible:$data.controllerDetailsModel.ControllerOverview.IsRegistered" style="display: none;">
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title">
+                                                    Controller Status
+                                                </h3>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="col-md-6 paddingLnone">
+                                                    <span class="ispicon pull-left ispicon_acDisabled" data-bind="css: controllerDetailsModel.ControllerOverview.powerIconCssClass"></span>
+                                                    <span class="pull-left connStatus">
+                                                        <span class="bold"> AC</span>
+                                                        <h5 class="bold gray" data-bind="css: controllerDetailsModel.ControllerOverview.powerCssClass,
+                                                                                    text: controllerDetailsModel.ControllerOverview.powerStatusText">N/A</h5>
+                                                        <p class="s5" data-bind="text:$data.controllerDetailsModel.ControllerOverview.PowerStatusTime"></p>
+                                                        <p class="s5" data-bind="text:$data.controllerDetailsModel.ControllerOverview.PowerStatusDate"></p>
+                                                    </span>
+                                                </div>
+                                                <div class="col-md-6 paddingLnone">
+                                                    <span class="ispicon pull-left ispicon_batteryDisabled" data-bind="css: controllerDetailsModel.ControllerOverview.batteryIconCssClass"></span>
+                                                    <span class="pull-left connStatus">
+                                                        <span class="bold"> Battery</span>
+                                                        <h5 class="bold gray" data-bind="css: controllerDetailsModel.ControllerOverview.batteryCssClass,
+                                                                                    text: controllerDetailsModel.ControllerOverview.batteryStatusText">N/A</h5>
+                                                        <p class="s5" data-bind="text:$data.controllerDetailsModel.ControllerOverview.BatteryStatusTime"></p>
+                                                        <p class="s5" data-bind="text:$data.controllerDetailsModel.ControllerOverview.BatteryStatusDate"></p>
+                                                    </span>
+                                                </div>
+                                                <hr class="clear">
+                                                <div class="clear" data-bind="visible:$data.controllerDetailsModel.ControllerOverview.IsRegistered" style="display: none;">
+                                                    <label class="s7"> Continuous Connection Since</label>
+                                                    <p class="s4" data-bind="text:$data.controllerDetailsModel.ControllerOverview.RegisterTime"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- CONTROLLER STATUS END-->
+                                    </div>
+
+                                    <!-- DATA SYNC START-->
+                                    <div class="cardWrapper col-md-4 sysStatWrapper hide">
+                                        <div class="panel panel-info white controllerdetails scanDevices systemStatus">
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title">
+                                                    System Status
+                                                </h3>
+                                            </div>
+                                            <div class="panel-body">
+                                                <hr class="clear">
+                                                <div>
+                                                    <label>View Alarms</label>
+                                                    <br>
+                                                    <a> View</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- DATA SYNC END-->
+
+                                    <div class="cardWrapper col-md-4 syncWrapper" data-bind="visible:$data.controllerDetailsModel.ControllerOverview.IsRegistered" style="display: none;">
+                                        <!-- DATA SYNC START-->
+                                            <div class="panel panel-info white controllerdetails">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">
+                                                        Configuration Sync With MPC
+                                                    </h3>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="clear syncCloudStat " data-bind="visible: $data.controllerDetailsModel.ControllerOverview.DisplaySyncFail" style="display: none;">
+                                                        <span class="ispicon ispicon_majorError pull-left"></span>
+                                                        <span class="pull-left">
+                                                            <label class="red">Sync Failed</label>
+                                                        </span>
+                                                    </div>
+                                                    <div class="pull-right" data-bind="visible: $data.controllerDetailsModel.ControllerOverview.DisplaySyncButton" style="display: none;">
+                                                        <span class="btn btn-primary syncBtn  mar-r0" data-bind="click:syncDeviceController,visible: $data.controllerDetailsModel.ControllerOverview.DisplaySyncButton" style="display: none;">Sync</span>
+                                                    </div>
+                                                    <div class="progressLoading clear" data-bind="visible: $data.controllerDetailsModel.ControllerOverview.DisplaySyncInitiated" style="display: none;">
+                                                        <span class="t3">
+                                                            Syncing with Cloud
+                                                        </span>
+                                                        <div class="meter progress ispprogress">
+                                                            <div class="progress-bar progress-bar-striped pink active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progressLoading clear" data-bind="visible: $data.controllerDetailsModel.ControllerOverview.DisplayInitialSync" style="display: none;">
+                                                        <span class="t3">
+                                                            Syncing With Cloud
+                                                        </span>
+                                                        <div class="meter progress">
+                                                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="clear">
+                                                    <div class="clear">
+                                                        <label class="s4">  Last Synced on</label>
+                                                        <p class="synctime" data-bind="text: $data.controllerDetailsModel.ControllerOverview.DeviceSyncTime"></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <!-- DATA SYNC END-->
+                                        <!-- FIRMWARE START-->
+ <div class="clear fwUpgrade" data-bind="visible:$data.controllerDetailsModel.ControllerOverview.IsRegistered" style="display: none;">
+                                            <div class="panel panel-info white controllerdetails">
+                                                <div class="panel-heading pad-b10">
+                                                    <h3 class="panel-title">
+                                                        Gateway Firmware Version
+                                                    </h3>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div>
+                                                        <label>Current Version:</label>|
+                                                        <span class="blue bold" data-bind="text:$data.controllerDetailsModel.ControllerOverview.DeviceFwVersion"></span>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- FIRMWARE END-->
+                                        <!-- ALARM EVENT STARTS-->
+                                        <div class="clear fwUpgrade">
+                                            <div class="panel panel-info white controllerdetails">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title pull-left">
+                                                        Alarms
+                                                    </h3>
+                                                    <span class="btn btn-default syncBtn pull-right" data-bind="event:{click: $data.gotoalarm}">View</span>
+                                                </div>
+                                                <div class="panel-body hide">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- ALARM EVENT ENGS-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="settings" class="tab-pane">
+                        <div class="row scroll-y settingsTab">
+                            <div class="contentContainer">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="commsPath" class="tab-pane">
+                        <div class="row scroll-y commsPath">
+                            <div class="contentContainer">
+                                <div class="col-md-12 form-group viewmode">
+                                    <h3>
+                                        <span>IP Settings </span>
+                                        <label class="switch pull-left">
+                                            <input type="checkbox">
+                                            <div class="slider round"></div>
+                                        </label>
+                                    </h3>
+                                    <div class="col-md-12 clear paddingLnone">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Use DHCP</label>
+                                        </div>
+                                        <div class="ipSettings clear">
+                                            <div class="form-group col-sm-6">
+                                                <label class="control-label">IP Address</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <label class="control-label">Gateway IP Address</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 ipSettingsRight clear paddingLnone">
+                                        <div class="form-group col-sm-6 paddingLnone">
+                                            <label class="control-label">Subnet Mask</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-sm-6 paddingLnone">
+                                            <label class="control-label">DNS Server IP Address</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="col-md-12 form-group viewmode">
+                                    <div class="gsmSettings">
+                                        <h3>
+                                            <span>GSM Settings </span>
+                                            <label class="switch pull-left">
+                                                <input type="checkbox">
+                                                <div class="slider round"></div>
+                                            </label>
+                                        </h3>
+                                        <div class="ipSettings">
+                                            <div class="col-md-6  clear">
+                                                <div class="form-group col-sm-12 paddingLnone">
+                                                    <label class="control-label">Access Point Name</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="col-md-12 alarmReceiverWrapper" id="receiverDataGrid">
+                                    <h3>Alarm Receiver Configuration</h3>
+
+                                    <div class="table-responsive panel-body">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Receiver Name</th>
+                                                    <th>Address Type</th>
+                                                    <th>Address </th>
+                                                    <th>Enable/Disable</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody data-bind="foreach: controllerDetailsModel.receiverConfigs "></tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-footer">
+                            <div class="pull-left">
+                                <span class="text-danger text-left" data-bind="visible: $data.IsError, text: $data.ErrorMessage" style="display: none;"></span>
+                            </div>
+                            <div class="btn-group pull-right" role="group" aria-label="group button">
+                                <button type="button" id="ARCAdd" class="btn btn-default" data-bind="click:addReceiver, disable:disableAddReceiver">Add</button>
+                                <button type="button" id="ARCDelete" class="btn btn-default">Delete</button>
+                                <button type="button" id="ARCReset" class="btn btn-default" data-bind="click:resetARCData">Reset</button>
+                                <button type="button" id="ARCSave" class="btn btn-primary" data-bind="click:saveReceiver">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="report" class="tab-pane">
+                        <div class="row scroll-y reportTab viewWrapper" data-bind="css:{'viewWrapper':$data.disableReportControls}">
+                            <div class="contentContainer">
+                                <div>
+                                    <div class="cardlistview isptabs reportList">
+                                        <div class="reportsHeader">
+                                            <span class="name">
+                                                Alarm Reports
+                                                <span class="pull-right">
+                                                    <a class="ispicon ispicon_plus" title="Add New" data-bind="css:{'disabled':$data.reportsListModel.Reports().length>=4},click:$data.addNewReport"></a>
+                                                    <span class="dropdown ispActionMenu">
+                                                        <span class="dropdown-toggle" data-toggle="dropdown">
+                                                            <span class="ispicon ispicon_more" data-toggle="tooltip" title="More"></span>
+                                                        </span>
+                                                        <ul class="dropdown-menu ispmenu dropdown-menu-right">
+                                                            <li><a href="#">Delete</a></li>
+                                                        </ul>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="listStickyHeader">
+                                            <b><span data-bind="text:$data.reportsListModel.Reports().length">0</span> Reports</b>
+                                        </div>
+                                        <div>
+                                            <ul class="list-group scroll-x scroll-y" data-bind="template: {name: 'AlarmReportList-template', foreach: $data.reportsListModel.Reports()}"></ul>
+                                            <script type="text/html" id="AlarmReportList-template">
+                                                <li class="list-group-item" data-bind="click:$root.onReportSelect, css:{'active':$data.ReportName()===$parent.selectedReportData.ReportName()}">
+                                                    <div class="checkbox">
+                                                        <input type="checkbox">
+                                                    </div>
+                                                    <div class="col-md-10 controllerList">
+                                                        <span class="name" name="report_name" data-bind="text: $data.ReportName"></span> <br />
+                                                        <div class="controllersec">
+                                                            <div name="report_account_no" data-bind="text: $data.AccountNumber"></div>
+                                                            <div>Status: <span name="report_status" data-bind="text: $data.IsEnabled ? 'Enabled' : 'Disabled'"></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </li>
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reportData viewmode" data-bind="css:{'viewmode':$data.disableReportControls()}">
+                                    <div class="col-md-12">
+                                        <label class="switch pull-right">
+                                            <input type="checkbox" data-bind="checked:$data.isReportEnabled">
+                                            <div class="slider round"></div>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <div class="form-group">
+                                            <label class="control-label"> Report Name</label>
+                                            <input type="text" class="form-control" id="report_name" name="report_name" data-bind="textInput :$data.selectedReportData.ReportName">
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label">Account Number</label>
+                                            <input type="text" class="form-control" id="report_accountno" name="report_accountno" data-bind="textInput :$data.selectedReportData.AccountNumber">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 form-group partitionWrapper">
+                                        <h4>
+                                            <b>Area - <span data-bind="text: $data.selectedReportData.Areas().length">0</span></b>
+                                            <span class="pull-right selectAll seeAlllink">
+                                                <span class="seeAllAreas1" data-toggle="modal" data-target="#allAreas1" title="See All Areas">See All</span>
+                                            </span>
+                                        </h4>
+                                        <div data-bind="foreach: $data.filteredAreas"></div>
+                                    </div>
+
+                                    <div class="col-md-12 form-group partitionWrapper">
+                                        <h4>
+                                            <b>Events Type</b>
+                                            <span class="checkbox pull-right selectAll">
+                                                <label><input type="checkbox" data-bind="checked: $data.allCheckedEventTypes">Select All</label>
+                                            </span>
+                                        </h4>
+                                        <div data-bind="foreach: $data.selectedReportData.EventTypes()"></div>
+                                    </div>
+                                    <div class="col-md-12 form-group partitionWrapper">
+                                        <h4>
+                                            <b>Alarm Receiver</b>
+                                            <span class="ispicon ispicon_plus pull-right" title="Add New"></span>
+                                        </h4>
+                                        <div class="form-group">
+                                            <label class="control-label">Primary Receiver </label>
+                                            <dropdown name="primary_receiver" id="primaryReceiver" params="options:$data.controllerDetailsModel.receiverConfigs(), optionsText: 'ReceiverName',optionsValue:'Id',optionsCaption: 'Select Primary receiver',value:$data.selectedReportData.PrimaryARC" tabindex="0"><div data-bind="css: { multiselect: multiSelect }" class="ispdropdown">
+                    <span class="form-control ellipsis newform-control" data-bind="css: { disabled: !enable() }, click: toggleItems, event: { keydown: onControlKeyDown }">
+                        <span class="displaytext" data-bind="css: {moretext: hasMoreText}">
+                            <span class="ellipsis" data-bind="text: displayText">Select Primary receiver</span>
+                            <a class="link ellipsis" data-bind="visible: hasMoreText, text: moreText, click: toggleMoreItems, clickBubble: false" style="display: none;"></a>
+                        </span>
+                        <span class="ispicon ispicon_newdropArrow" data-bind="visible: enable"></span>
+                    </span>
+                    <!-- ko if: enable -->
+                    <input type="hidden" class="dropdownvalidation" data-bind="attr: { name: $data.inputName(), value: $data.hasValue() }" name="primary_receiver" value="">
+                    <!-- /ko -->
+                    <div class="ispdropdown-popup" data-bind="if: isExpand, visible: isExpand, css: popupCss" style="display: none;"></div>
+                </div></dropdown>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Secondary Receiver</label>
+                                            <dropdown id="secondaryReceiver" params="options: $data.controllerDetailsModel.receiverConfigs(),optionsText: 'ReceiverName',optionsValue:'Id',optionsCaption: 'Select Secondary receiver', value: $data.selectedReportData.SecondaryARC" tabindex="0"><div data-bind="css: { multiselect: multiSelect }" class="ispdropdown">
+                    <span class="form-control ellipsis newform-control" data-bind="css: { disabled: !enable() }, click: toggleItems, event: { keydown: onControlKeyDown }">
+                        <span class="displaytext" data-bind="css: {moretext: hasMoreText}">
+                            <span class="ellipsis" data-bind="text: displayText">Select Secondary receiver</span>
+                            <a class="link ellipsis" data-bind="visible: hasMoreText, text: moreText, click: toggleMoreItems, clickBubble: false" style="display: none;"></a>
+                        </span>
+                        <span class="ispicon ispicon_newdropArrow" data-bind="visible: enable"></span>
+                    </span>
+                    <!-- ko if: enable -->
+                    <input type="hidden" class="dropdownvalidation" data-bind="attr: { name: $data.inputName(), value: $data.hasValue() }" name="" value="">
+                    <!-- /ko -->
+                    <div class="ispdropdown-popup" data-bind="if: isExpand, visible: isExpand, css: popupCss" style="display: none;"></div>
+                </div></dropdown>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-footer">
+                            <div class="pull-left">
+                                <span class="text-danger text-left" data-bind="visible: $data.IsError, text: $data.ErrorMessage" style="display: none;"></span>
+                            </div>
+                            <div class="btn-group pull-right" role="group" aria-label="group button">
+                                <button type="button" class="btn btn-default" data-bind="click:$data.cancelReport">Cancel</button>
+                                <button type="button" class="btn btn-primary" data-bind="click:$data.saveReport">Save</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- CONTROLLER OVERVIEW-->
+    <!-- AREA LIST-->
+    <div id="allAreas1" class="modal fade ispmodal allAreas" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">Area</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group col-sm-12">
+                        <div class="selectAll pull-left viewmode" data-bind="css:{'viewmode':$data.disableReportControls()}">
+                            <input type="checkbox" data-bind="checked: $data.allCheckedAreas">
+                            <span class="modalAllAreas">Select All</span>
+                        </div>
+                        <span class="allAreaSearch"><input class="form-control" type="text" data-bind="textInput: $data.query" autocomplete="off"><span class="ispicon ispicon_search "></span> </span>
+                    </div>
+                    <div class="table-responsive panel-body selectAllArea viewmode" data-bind="css:{'viewmode':$data.disableReportControls()}">
+                        <table class="table">
+                            <tbody data-bind="foreach: $data.filteredModelAreas"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" data-bind="click:cancelAreaModal">Cancel</button>
+                    <button type="button" class="btn btn-primary disabledbutton" data-dismiss="modal" data-bind="css:{'disabledbutton':$data.disableReportControls()},click:saveAreasModal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- AREA LIST-->
+    <!-- DELETE REPORTS -->
+    <div class="modal ispmodal fade deleteReport" id="deleteReport" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="lineModalLabel">Delete Reports</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="row scroll-x scroll-y">
+                        Do you want to delete the selected reports?
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <div role="group" aria-label="group button">
+                        <button type="button" class="btn btn-default">Cancel</button>
+                        <button type="button" class="btn btn-primary">Delete</button>
+                    </div>
+                </div>
+                <!-- FOOTER SECTION ENDS -->
+            </div>
+        </div>
+    </div>
+    <!-- DELETE REPORTS -->
+    <!-- DISABLE REPORTS -->
+    <div class="modal ispmodal fade disableReport" id="disableReport" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="lineModalLabel">Disable Reports</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="row scroll-x scroll-y">
+                        Do you want to disable the selected reports?
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <div role="group" aria-label="group button">
+                        <button type="button" class="btn btn-default">Cancel</button>
+                        <button type="button" class="btn btn-primary">Disable</button>
+                    </div>
+                </div>
+                <!-- FOOTER SECTION ENDS -->
+            </div>
+        </div>
+    </div>
+    <!-- DISABLE REPORTS -->
+</div>
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</body>
+</html>

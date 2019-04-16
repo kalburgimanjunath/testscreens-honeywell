@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			.table_loading{
+				    vertical-align: middle !important;
+    				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="contentContainer"><div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hide">
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pull-right text-right">
+				<span>Last updated 2 mins ago</span>
+				<span class="hide">Run Diagnostics to fetch new values</span>
+
+				<button type="button" class="btn btn-primary hide">RUN DIAGNOSTICS</button>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padall-20">
+			<h3>
+                <span>Controller Supervision</span>
+            </h3>
+            <div class="well col-md-12">
+            	<b>Tamper:</b><span> Lid and Wall tamper, Supervised bell 1 &amp; 2, Auxiliary tamper </span>
+            </div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pad-l20">
+			<h3>
+                <span>Controller Power</span>
+                <button type="button" class="btn btn-primary 
+ pull-right">RUN DIAGNOSTICS</button>
+            </h3>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 nopadding padall-5">
+				
+						<div class="form-group col-xs-4 col-sm-4 col-md-4 col-lg-4">
+							<span class="control-label">Power Source</span>
+							<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+						</div>
+						<div class="form-group col-xs-4 col-sm-4 col-md-4 col-lg-4">
+							<span class="control-label">System Voltage (V)</span>
+							<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+						</div>
+						<div class="form-group col-xs-4 col-sm-4 col-md-4 col-lg-4">
+							<span class="control-label">Total Input Current (mA)</span>
+							<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+						</div>
+						<div class="form-group col-xs-4 col-sm-4 col-md-4 col-lg-4">
+							<span class="control-label">Total Output Current (mA)</span>
+							<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+						</div>
+						
+				
+		</div>
+		<div class="table-responsive col-md-12 isptable padall-20">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>AUX Power Input</th>
+						<th>Voltage (V)</th>
+						<th>AUX Power Input</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>AUX 1</td>
+						<td>20</td>
+						<td>OK</td>
+					</tr>
+					<tr>
+						<td>AUX 1</td>
+						<td>20</td>
+						<td>OK</td>
+					</tr>
+					<tr>
+						<td>AUX 1</td>
+						<td>20</td>
+						<td>OK</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="table-responsive col-md-12 isptable padall-20">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Battery Power Output</th>
+						<th>Voltage (V)</th>
+						<th>AUX Power Input</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Battery 1</td>
+						<td>20</td>
+						<td>OK</td>
+					</tr>
+					<tr>
+						<td>Battery 2</td>
+						<td>20</td>
+						<td>OK</td>
+					</tr>
+					<tr>
+						<td>Battery 2</td>
+						<td>20</td>
+						<td>OK</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr>
+
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padall-20 pad-b0 pad-l20">
+			<h3>
+                <span>Cell Radio</span>
+                <button type="button" class="btn btn-primary 
+ pull-right">RUN DIAGNOSTICS</button>
+            </h3>
+		</div>
+
+		<div class="table-responsive col-md-12 isptable padall-20">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Network</th>
+						<th>Online</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							Cell provider
+
+						</td>
+						<td>Online</td>
+					</tr>
+					<tr>
+						<td>
+							Signal strength
+						</td>
+						<td>
+							Strong
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Data connection status
+						</td>
+						<td>
+							Connected
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Network error message
+						</td>
+						<td>
+							Network error message
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Available networks
+						</td>
+						<td>
+							<span class="eagle eagle_info">
+							<span></span>
+							<span class="eagle eagle_info">
+							<span></span>
+							<span class="eagle eagle_info">
+							<span></span>
+							<span class="eagle eagle_info">
+							<span></span>
+						</span></span></span></span></td>
+					</tr>
+					<tr>
+						<td>
+							
+							SIM PIN
+						</td>
+						<td>
+								Sim PIN
+						</td>
+					</tr>
+					<tr>
+						<td>
+							SIM Card status
+						</td>
+						<td>
+							Sim Card status
+						</td>
+					</tr>
+					<tr>
+						<td>
+							APN Status
+						</td>
+						<td>
+							APN Status
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Login status
+						</td>
+						<td>
+							Login status
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pad-l20">
+			<h3>
+                <span>Comms channel</span>
+                <button type="button" class="btn btn-primary pull-right">RUN DIAGNOSTICS</button>
+            </h3>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pad-l20 pad-b20" pad-b20="">
+			<div class="">
+					<textarea name="" id="textarea" class="form-control" rows="3" required="required"></textarea>
+				</div>
+		</div>
+
+                                
+                                
+                                
+                                
+                                
+
+                            </div>
+
+
+
+
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</body>
+</html>

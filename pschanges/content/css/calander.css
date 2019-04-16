@@ -1,0 +1,691 @@
+.calndr .mpc .calendar-psq body {
+    padding: 0;
+    overflow: hidden;
+}
+.mpc .calndr.btn {
+    margin: 0;
+}
+.calndr .mpc .scroll-calandar-col-3 .calndr-container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.calndr .mpc .scroll-calandar-col-3 .calndr-container2 h2 {
+    padding: 20px 0 3px 20px;
+}
+.calndr .mpc .scroll-calandar-col-3 h3 {
+    padding: 20px 0 18px 19px;
+}
+.calndr .mpc .scroll-calandar-col-3 h2.video {
+    padding: 19px 0 14px 0;
+}
+.calndr .mpc .scroll-calandar-col-3 span.clndr-contact {
+    /*    margin: -2px 0 0 0;*/
+    font-family: 'HoneywellSansWeb-Bold';
+}
+.calndr .mpc .scroll-calandar-col-3 hr {
+    margin: 15px 18px 0 18px;
+}
+.calndr .mpc .scroll-calandar-col-3 .calndr-container2 p {
+    padding: 11px 0 0 0;
+}
+.calndr .mpc .scroll-calandar-col-3 p.door {
+    padding: 0 0 0 19px;
+    line-height: 20px !important;
+    margin: -3px 0 0 0;
+}
+.calndr .mpc .scroll-calandar-col-3 p.door_contact {
+    padding: 0 0 0 19px;
+    margin-top: -3px;
+}
+.calndr .mpc .scroll-calandar-col-3 p.door_title {
+    padding: 0 0 0 19px;
+}
+.calndr .mpc .scroll-calandar-col-3 p {
+    line-height: 1.5 !important;
+}
+.calndr .mpc .calndr-container2 {
+    border-bottom: 1px solid #e7e7e7;
+    height: 84px;
+}
+.calndr .mpc .calandar-col-3 {
+    overflow: auto;
+    padding: 0;
+}
+.calndr .mpc ul.nav-tabs.pw_tabs {
+    padding: 17px 0 4px 20px;
+    border-bottom: 1px solid #e7e7e7;
+    border-right: 1px solid #e7e7e7;
+}
+.calndr .mpc .calandar-col-2 {
+    border-right: #e7e7e7 solid 1px;
+    overflow: auto;
+    padding: 0;
+}
+.calndr .mpc .footer {
+    position: fixed;
+    bottom: 0;
+    width: 339px;
+    height: 64px;
+    border-top: #e7e7e7 1px solid;
+    background-color: #ffffff;
+}
+.calndr .mpc .footer p {
+    padding: 10px 0 0 20px;
+}
+.calndr .mpc .calndr-table table {
+    border-collapse: collapse;
+}
+.calndr .mpc .calndr-table tr {
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+}
+.calndr .mpc .calndr-table tr:hover td {
+    background-color: #f5f5f5;
+}
+.calndr .mpc .calndr-table .table>tbody>tr>td:last-child {
+    text-align: right;
+}
+.calndr .mpc .calndr-table .table>tbody>tr>td {
+    padding: 16px 16px 15px 20px;
+    line-height: normal;
+    vertical-align: top;
+}
+.calndr .mpc .calndr-table .table>tbody>tr>td:last-child {
+    padding: 16px 20px 15px 20px;
+    line-height: normal;
+    vertical-align: top;
+}
+.calndr .mpc .calndr-table td span.spinner-control i {
+    margin-top: 6px;
+}
+.calndr .mpc .calndr-table td div.devicename {
+    padding-bottom: 6px;
+    font-weight: bold;
+}
+.calndr .mpc div.footer-button {
+    padding: 16px 16px 0 0;
+}
+.calndr .mpc .footer .footer-button .btn:last-child {
+    margin-right: 10px !important;
+}
+.calndr .mpc .calandar-col-3 {
+    overflow: auto;
+}
+.calndr .mpc .sett-config-l {
+    padding: 24px 24px 57px 24px;
+}
+.calndr .mpc .sett-config-r {
+    padding: 7px 0 0 0;
+}
+.calndr .mpc div.sett-video {
+    padding-bottom: 0;
+    height: auto;
+    position: relative;
+}
+.calndr .mpc video.video {
+    width: 100%;
+}
+.calndr .mpc .video--wrapper {
+    position: relative;
+    display: inline-block;
+}
+.calndr .mpc .video--wrapper:hover {
+    cursor: pointer;
+}
+.calndr .mpc div.playpause {
+    position: absolute;
+    left: 43%;
+    right: 0;
+    bottom: 40%;
+    height: 46px;
+    width: 46px;
+    background: url(../../images/play.png) no-repeat center center;
+    background-size: 46px 46px;
+    cursor: pointer;
+}
+.calndr .mpc .video-pre {
+    width: 43%;
+    padding-bottom: 4px;
+}
+.calndr .mpc hr {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.calndr .mpc .scroll_shadow {
+    box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.2);
+}
+.calndr .mpc .btn-calndr-video {
+    padding: 0 6px !important;
+    cursor: pointer;
+    background-image: url(../../images/Icons_Sprites_MPC.svg) !important;
+    background-position: -513px -454px;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    color: #707070 !important;
+    border: 1px solid #d0d0d0;
+    text-transform: uppercase;
+    border-bottom: #1792e5 1px solid;
+    height: 36px !important;
+    width: 36px;
+}
+.calndr .mpc .btn-calndr-video:hover {
+    padding: 0 6px !important;
+    cursor: pointer;
+    background-image: url(../../images/Icons_Sprites_MPC.svg) !important;
+    background-position: -513px -454px;
+    background-repeat: no-repeat;
+    background-color: #EDF5F9;
+    color: #707070 !important;
+    border: 1px solid #8bc9f2;
+    text-transform: uppercase;
+    height: 36px !important;
+    width: 36px;
+    outline: none;
+}
+.calndr .mpc .btn-calndr-video:active {
+    padding: 0 6px !important;
+    cursor: pointer;
+    background-image: url(../../images/Icons_Sprites_MPC.svg) !important;
+    background-position: -483px -454px;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    color: #707070 !important;
+    border: 1px solid #d0d0d0;
+    text-transform: uppercase;
+    height: 36px !important;
+    width: 36px;
+    outline: none;
+}
+.calndr .mpc .btn-calndr-warning {
+    padding: 0 6px !important;
+    cursor: pointer;
+    background-image: url(../../images/Icons_Sprites_MPC.svg) !important;
+    background-position: -723px -453px;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    color: #707070 !important;
+    border: 1px solid #d0d0d0;
+    text-transform: uppercase;
+    border-bottom: #1792e5 1px solid;
+    height: 36px !important;
+    width: 36px;
+}
+.calndr .mpc .btn-calndr-warning:hover {
+    padding: 0 6px !important;
+    cursor: pointer;
+    background-image: url(../../images/Icons_Sprites_MPC.svg) !important;
+    background-position: -723px -453px;
+    background-repeat: no-repeat;
+    background-color: #EDF5F9;
+    color: #707070 !important;
+    border: 1px solid #8bc9f2;
+    text-transform: uppercase;
+    height: 36px !important;
+    width: 36px;
+    outline: none;
+}
+.calndr .mpc .btn-calndr-warning:active {
+    padding: 0 6px !important;
+    cursor: pointer;
+    background-image: url(../../images/Icons_Sprites_MPC.svg) !important;
+    background-position: -753px -453px;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    color: #707070 !important;
+    border: 1px solid #d0d0d0;
+    text-transform: uppercase;
+    height: 36px !important;
+    width: 36px;
+    outline: none;
+}
+.calndr .mpc .calndr-nav-btn .btn:first-child {
+    margin-right: 10px;
+}
+.calndr .mpc .calndr-nav-btn {
+    padding-right: 19px !important;
+}
+.calndr .mpc .sett-config-r .btn {
+    margin-top: 17px;
+}
+@media only screen and (min-width: 1367px) and (max-width: 1920px) {
+    .calndr .mpc div.playpause {
+        position: absolute;
+        left: 47%;
+        right: 0;
+        bottom: 45%;
+        height: 46px;
+        width: 46px;
+        background: url(../../images/play.png) no-repeat center center;
+        background-size: 46px 46px;
+        cursor: pointer;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    .calndr .mpc .calndr-table .table {
+        font-size: 12px;
+    }
+    .calndr .mpc .people_group {
+        width: 290px;
+        border-right: 1px solid #e7e7e7;
+        padding: 0;
+    }
+    .calndr .mpc .people_details {
+        width: calc(100% - 291px);
+        padding: 0;
+    }
+    .calndr .mpc .footer {
+        position: fixed;
+        bottom: 0;
+        width: 289px;
+        height: 64px;
+        border-top: #e7e7e7 1px solid;
+        background-color: #ffffff;
+    }
+    .calndr .mpc td span.spinner-control i {
+        margin-top: 11px;
+    }
+    .calndr .mpc .calndr-container2 {
+        border-bottom: 1px solid #e7e7e7;
+        height: 133px;
+    }
+}
+.calndr .mpc .label {
+    text-transform: uppercase!important;
+}
+.calndr .mpc .masterhead {
+    position: relative !important;
+    width: 100%;
+    top: 0;
+    height: 60px;
+}
+.calndr .mpc #calendar {
+    font-size: 12px;
+    height: auto;
+    /* width: 97%; */
+    margin: 70px 2px 0 0;
+    color: #9d9d9d;
+}
+.calndr .mpc .calndr_day_date {
+    border-bottom: 1px solid #E7E7E7;
+    padding-bottom: 44px !important;
+}
+.calndr .mpc .calndr_day_date .cal-day {
+    display: block;
+    margin-bottom: 4px;
+    color: #808080;
+    font-family: 'HoneywellSansWeb-Bold';
+    padding: 3px;
+    text-align: center;
+}
+.calndr .mpc .calndr_day_date ul.cal-nav {
+    padding-left: 0;
+    margin-left: 7px;
+    list-style: none;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+.calndr .mpc .cal-nav li:first-child {
+    padding-left: 0;
+}
+.calndr .mpc .cal-nav li {
+    text-align: center;
+    padding: 0;
+    width: 41px;
+    margin: 0 0 0 5px;
+    float: left;
+}
+.calndr .mpc .calndr_day_date .cal-date {
+    font-family: 'HoneywellSansWeb-Bold';
+    border-radius: 18px;
+    padding: 10px 0 0 0;
+    margin: 0 auto;
+    display: block;
+    color: #606060;
+    font-size: 13px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+}
+.calndr .mpc .date-hw_red {
+    color: #fff !important;
+    background-color: #ee3124;
+}
+.calndr .mpc .date-hw_red-o {
+    color: #606060 !important;
+    background-color: #ffffff !important;
+}
+.calndr .mpc .date-hw_disabled {
+    color: #cccccc !important;
+}
+.calndr .mpc .date-hw_red-o {
+    color: #606060 !important;
+    background-color: #fdeae9 !important;
+    border: #fbd5d3 1px solid;
+}
+.calndr .mpc .date-hw_red-o {
+    background-color: #ffffff !important;
+}
+.calndr .mpc .date-hw_red-o:hover {
+    background-color: #fdeae9 !important;
+}
+.calndr .mpc .notification-tage {
+    margin-left: 12px;
+    vertical-align: middle;
+}
+.calndr .mpc span.notification-critical {
+    font-family: 'HoneywellSansWeb-Bold';
+    color: #ee3124;
+    font-size: 12px;
+    display: inline-block;
+    margin: 0px 0px 0px 24px;
+    vertical-align: middle;
+}
+.calndr .mpc .calendar-psq {}
+.calndr .mpc .calendar-psq .calndr-wrapper li {
+    float: left;
+}
+.calndr .mpc .calendar-psq .calndr-wrapper li.calndr-lft li {
+    min-height: 70px;
+}
+.calndr .mpc .calendar-psq .calndr-wrapper li.calndr-lft {
+    width: 23%;
+}
+.calndr .mpc .calendar-psq .calndr-wrapper li.calndr-rt {
+    width: 77%;
+}
+.calndr .mpc .calendar-psq .calndr-wrapper .calndr-rt li {
+    border-bottom: 2px solid #e7e7e7;
+    min-height: 70px;
+    width: 100%;
+}
+.calndr .mpc .calendar-psq .calndr-wrapper .calndr-timeline {
+    border-right: #d0d0d0 1px solid;
+    height: 414px;
+    padding: 60px 20px 0 37px;
+    background-color: #f2f2f2;
+    color: #606060;
+}
+.calndr .mpc .calendar-psq .calndr-wrapper li.calndr-rt ul li span {
+    border-bottom: red 1px solid;
+    display: block;
+}
+.calndr .mpc .ico-control {
+    background-image: url(../../images/Icons_Sprites_MPC.svg) !important;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+}
+.calndr .mpc .ico-control .ico-critical {
+    background-position: -490px -428px;
+}
+.calndr .mpc .calndr-table .ico-control .ui-icon-cam-red-o {
+    background-position: -519px -463px;
+}
+.calndr .mpc .calndr-table .ico-control .ui-icon-door-red-o {
+    background-position: -519px -430px;
+}
+.calndr .mpc .calndr-table .ico-control .ui-icon {
+    background-image: url(../../images/Icons_Sprites_MPC.svg) !important;
+    width: 22px;
+    height: 22px;
+    top: 12px;
+}
+.calndr .mpc .calndr-table .spinner-control .ui-icon,
+.calndr .mpc .calndr-table .spinner-control .ui-widget-content .ui-icon {
+    background-image: url(../../images/Icons_Sprites_MPC.svg) !important;
+    width: 20px;
+    height: 20px;
+}
+.calndr .mpc .calndr-table .ico-control .ui-icon {
+    position: relative;
+    display: block;
+    background-repeat: no-repeat;
+}
+
+/** site popup **/
+
+.calndr .mpc .popup-site {
+    position: absolute;
+    top: 57px;
+    border: 1px solid #e7e7e7;
+    width: calc(100% - 20px);
+    z-index: 999;
+    background: #fff;
+    max-height: 256px;
+    display: none;
+    overflow: auto;
+}
+.calndr .mpc .popup-site .focus-icon-search {
+    border: none;
+    background-image: url(../../images/Icons_Sprites_MPC.svg);
+    background-position: 120px 496px;
+    height: 26px;
+    cursor: pointer;
+    float: left;
+    width: 30px;
+    margin-left: 15px;
+    position: relative;
+    top: 6px;
+}
+.calndr .mpc .popup-site .form-search {
+    background: none !important;
+    text-indent: 0px !important;
+    width: 100% !important;
+    text-indent: 0px !important;
+    width: calc(100% - 45px) !important;
+    float: right;
+    height: 43px !important;
+    padding-right: 9px !important;
+}
+.calndr .mpc .popup-site .form-search:focus {
+    border: none !important;
+    background: none !important;
+}
+.calndr .mpc .popup-site .form-search:focus + .focus-icon-search {
+    background-position: 120px 465px;
+    border: none !important;
+    position: relative;
+    margin-left: 15px;
+    height: 25px;
+    top: 7px;
+}
+.calndr .mpc .popup-site .icon-search {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    height: 44px;
+}
+.calndr .mpc .popup-site .control-label {
+    line-height: 30px;
+}
+.calndr .mpc .popup-site .checkbox label::before {
+    margin-left: -12px;
+}
+.calndr .mpc .popup-site .ps-checkbox input[type="checkbox"]:checked + span {
+    left: -13px !important;
+}
+
+/** css for accordiun **/
+
+
+/** acordiun **/
+
+.calndr .mpc #accordion1 li {
+    padding: 0;
+    margin: 0;
+    float: left;
+    width: 100%;
+    border-bottom: none;
+}
+.calndr .mpc #accordion1 a {
+    padding: 6px 20px 4px;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+}
+.calndr .mpc #accordion1 a:hover {
+    background: #f5f5f5;
+}
+.calndr .mpc #accordion1 ul a {
+    padding-left: 58px;
+}
+
+/** css for accordiun **/
+
+.calndr .mpc .popup-site .icon-add {
+    background-position: -792px -185px;
+    font-size: 0;
+    margin: 0 20px 3px 0;
+    width: 17px;
+}
+.calndr .mpc .popup-site .icon-add:hover {
+    background-position: -792px -215px;
+}
+.calndr .mpc .popup-site .icon-add:focus {
+    background-position: -792px -245px;
+}
+.calndr .mpc .popup-site .collaspe-icons > a > span > span {
+    background-position: -732px -335px !important;
+    background-image: url(../../images/Icons_Sprites_MPC.svg);
+}
+.calndr .mpc .popup-site .collaspe-icons > a > span > span:hover {
+    background-position: -732px -365px !important;
+}
+.calndr .mpc .popup-site .collaspe-icons > a > span > span:focus {
+    background-position: -732px -395px;
+}
+.calndr .mpc .popup-site .ps-disabled .icon-add,
+.calndr .mpc .popup-site .ps-disabled .icon-add:hover {
+    background-position: -792px -275px;
+}
+
+/** site popup **/
+
+.calndr .mpc .popup-site {
+    position: absolute;
+    top: 57px;
+    border: 1px solid #e7e7e7;
+    width: calc(100% - 20px);
+    z-index: 999;
+    background: #fff;
+    max-height: 256px;
+    display: none;
+    overflow: auto;
+}
+.calndr .mpc .popup-site .focus-icon-search {
+    border: none;
+    background-image: url(../../images/Icons_Sprites_MPC.svg);
+    background-position: 120px 496px;
+    height: 26px;
+    cursor: pointer;
+    float: left;
+    width: 30px;
+    margin-left: 15px;
+    position: relative;
+    top: 6px;
+}
+.calndr .mpc .popup-site .form-search {
+    background: none !important;
+    text-indent: 0px !important;
+    width: 100% !important;
+    text-indent: 0px !important;
+    width: calc(100% - 45px) !important;
+    float: right;
+    height: 43px !important;
+    padding-right: 9px !important;
+}
+.calndr .mpc .popup-site .form-search:focus {
+    border: none !important;
+    background: none !important;
+}
+.calndr .mpc .popup-site .form-search:focus + .focus-icon-search {
+    background-position: 120px 465px;
+    border: none !important;
+    position: relative;
+    margin-left: 15px;
+    height: 25px;
+    top: 7px;
+}
+.calndr .mpc .popup-site .icon-search {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    height: 44px;
+}
+.calndr .mpc .popup-site .control-label {
+    line-height: 30px;
+}
+.calndr .mpc .popup-site .checkbox label::before {
+    margin-left: -12px;
+}
+.calndr .mpc .popup-site .ps-checkbox input[type="checkbox"]:checked + span {
+    left: -13px !important;
+}
+.calndr .mpc .arrow-top + .icon_list1 {
+    background-image: url(../../images/Icons_Sprites_MPC.svg);
+    background-position: 525px 239px;
+    height: 5px;
+    width: 9px;
+    position: absolute;
+    right: 12px;
+    top: 38px;
+}
+.calndr .mpc .arrow-down + .icon_list1 {
+    background-image: url(../../images/Icons_Sprites_MPC.svg);
+    background-position: 525px 217px;
+    height: 5px;
+    width: 9px;
+    position: absolute;
+    right: 12px;
+    top: 38px;
+}
+.calndr .mpc .ps-top-section > .form-group {
+    position: relative;
+}
+.calndr .mpc .popup-site .ps-checkbox input[checked="checked"] + span {
+    height: 16px;
+    width: 17px;
+    background-image: url(../../images/Icons_Sprites_MPC.svg);
+    background-position: 259px -252px;
+    left: -13px;
+    position: absolute;
+    top: 7px;
+}
+.calndr .mpc .popup-site legand {
+    width: 220px;
+    word-wrap: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    height: 20px;
+    margin-top: 8px;
+}
+@media screen and (max-width: 1300px) {
+    .calndr .mpc .popup-site legand {
+        width: 150px;
+    }
+}
+@media screen and (max-width: 1057px) {
+    .calndr .mpc .popup-site legand {
+        width: 115px;
+    }
+}
+.calndr .mpc .form-group label:after {
+    content: "";
+    display: inline;
+}
+.calndr .mpc .arrow-top + .icon_list1 {
+    background-image: url(../../images/Icons_Sprites_MPC.svg) !important;
+    background-position: 525px 239px !important;
+    height: 5px;
+    width: 9px;
+    position: absolute;
+    right: 12px;
+    top: 38px;
+}

@@ -1,0 +1,29 @@
+﻿window.cachingServiceConfig = window.cachingServiceConfig || {};
+
+window.cachingServiceConfig = (function ($) {
+    //  default expiration time out 
+    var storeExpirationMs = (1000 * 60 * 60 * 24); // 1 day
+
+    //create prefix key and expiration time for each chached function
+    var getUserConfig = (function () {
+        var config = {
+            prefix: "getusers_",
+            expirationTime: (1000 * 60 * 10) //10 min
+        };
+        return config;
+    })();
+
+    var getAccountConfig = (function () {
+        var config = {
+            prefix: "getaccounts_",
+            expirationTime: (1000 * 60 * 10) //10 min
+        };
+        return config;
+    })();
+
+    return {
+        storeExpirationMs: storeExpirationMs,
+        getUsers: getUserConfig,
+        getAccounts: getAccountConfig
+    }
+})(jQuery);

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+
+		<!-- Bootstrap CSS -->
+		
+		<link rel="stylesheet" href="https://aerocontent.honeywell.com/aero/portal/css/hon-dls.min.css" />
+		<script type="text/javascript" src="https://aerocontent.honeywell.com/aero/portal/js/hon-dls.min.js"></script>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			.online{
+				background: #658F2D;
+				color: #fff;
+				padding: 6px 20px;
+			}
+			.eagle{
+				padding: 20px 6px;
+			}
+
+			.offline{
+				background: #EE3124;
+				color: #fff;
+				padding: 6px 20px;
+			}
+		</style>
+	</head>
+	<body>
+		
+
+		<div class="container-fluid">
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<div role="tabpanel">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active">
+							<a href="#home" aria-controls="home" role="tab" data-toggle="tab">Areas</a>
+						</li>
+						<li role="presentation">
+							<a href="#tab" aria-controls="tab" role="tab" data-toggle="tab">Doors</a>
+						</li>
+						<li role="presentation">
+							<a href="#tab" aria-controls="tab" role="tab" data-toggle="tab">Cameras</a>
+						</li>
+					</ul>
+				
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="home">
+							<div class="online">
+								
+								<i class="icon icon-badge-alert eagle pull-right"></i>
+								<div class="">
+									<div class="">3 of 5 areas Armed</div>
+									<div class="h6">Ready to arm</div>
+								</div>
+							</div>
+
+							<div class="offline">
+								
+								<i class="icon icon-badge-alert eagle pull-right"></i>
+								<div class="">
+									<div class=""> 3 of 5 areas offline</div>
+									<div class="h6">since 10:30 AM</div>
+									<div class="h4">Remote actions are not possible for Offline areas.</div>
+
+								</div>
+							</div>
+
+							<div class="offline">
+								
+								<i class="icon icon-badge-alert eagle pull-right"></i>
+								<div class="">
+									<div class=""> 2 Alarms</div>
+									<div class="h6">Workspace</div>
+									<div class="h4">Before you take any action,ensure that the incidents in the area are addressed
+
+									</div>
+									<div>
+										<button type="button" class="btn btn-default">Check Zones</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 overview">
+				
+			</div>
+		</div>
+
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</body>
+</html>

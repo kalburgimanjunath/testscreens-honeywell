@@ -1,0 +1,106 @@
+﻿window.cachingService = window.cachingService || {};
+
+window.cachingService.Local = (function ($, amplify, config) {
+    var expires = { expires: config.storeExpirationMs };
+    var clear = function (key) {
+        return amplify.store(key, null);
+    },
+    fetch = function (key) {
+        return amplify.store(key);
+    },
+    save = function (key, value) {
+        amplify.store(key, value, expires);
+
+    },
+     save = function (key, value, expirationTime) {
+         amplify.store(key, value, { expires: expirationTime });
+
+     },
+    clearall = function () {
+        var key, data = amplify.store();
+        for (key in data) {
+            clear(key);
+        }
+    };
+
+    return {
+        fetch: fetch,
+        save: save,
+        clear: clear,
+        clearall: clearall
+    }
+})(jQuery, amplify, window.cachingServiceConfig);
+
+window.cachingService.Session = (function ($, amplify, config) {
+    var expires = { expires: config.storeExpirationMs };
+    var clear = function (key) {
+        return amplify.store.sessionStorage(key, null);
+    },
+    fetch = function (key) {
+        return amplify.store.sessionStorage(key);
+    },
+    save = function (key, value) {
+        amplify.store.sessionStorage(key, value, expires);
+
+    },
+    save = function (key, value, expirationTime) {
+        amplify.store.sessionStorage(key, value, { expires: expirationTime });
+
+    },
+    clearall = function () {
+        var key, data = amplify.store.sessionStorage();
+        for (key in data) {
+            clear(key);
+        }
+    };
+
+
+    return {
+        fetch: fetch,
+        save: save,
+        clear: clear,
+        clearall: clearall
+    }
+})(jQuery, amplify, window.cachingServiceConfig);
+
+window.cachingService.LocalVariable = (function ($, amplify, config) {
+
+    var expires = { expires: config.storeExpirationMs };
+    var clear = function (key) {
+        return amplify.store.memory(key, null);
+    },
+    fetch = function (key) {
+        return amplify.store.memory(key);
+    },
+    save = function (key, value) {
+        amplify.store.memory(key, value, expires);
+
+    },
+    save = function (key, value, expirationTime) {
+        amplify.store.memory(key, value, { expires: expirationTime });
+
+    },
+    clearall = function () {
+        var key, data = amplify.store.memory();
+        for (key in data) {
+            clear(key);
+        }
+    };
+
+    return {
+        fetch: fetch,
+        save: save,
+        clear: clear,
+        clearall: clearall
+    }
+})(jQuery, amplify, window.cachingServiceConfig);
+
+window.cachingService = (function ($, amplify, local, session, localCache) {
+    
+    return {
+        session: session,
+        local: local,
+        localVariable: localCache,
+    };
+
+})(jQuery, amplify, window.cachingService.Local, window.cachingService.Session, window.cachingService.LocalVariable);

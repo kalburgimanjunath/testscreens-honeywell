@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:https:// -->
+		<!--[if lt IE 9]>
+			<script src="https:https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https:https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="cardWrapper col-md-4">
+                                        <!-- CONTROLLER STATUS START-->
+                                        <div class="panel panel-info white controllerdetails controllerConn" data-bind="visible:$data.controllerDetailsModel.ControllerOverview.IsRegistered" style="">
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title">
+                                                    Controller Status
+                                                </h3>
+                                            </div>
+                                            <div class="panel-body">
+                                               
+                                                <div class="col-md-12 paddingLnone">
+                                                    <span class="ispicon pull-left ispicon_acDisabled" data-bind="css:$data.controllerDetailsModel.ControllerOverview.DisplayPowerStatus"></span>
+                                                    <span class="pull-left connStatus">
+                                                        <span class="bold"> Supervision</span>
+                                                        <span class="eagle eagle_Right-Arrow pull-right"></span>
+                                                        <h5 class="green bold" data-bind="visible: ($data.controllerDetailsModel.ControllerOverview.DevicePowerStatus()!= undefined) &amp;&amp; ($data.controllerDetailsModel.ControllerOverview.IsPowerConnectStatus())" style="display: none;">Connected</h5>
+                                                        <h5 class="red bold" data-bind="visible: ($data.controllerDetailsModel.ControllerOverview.DevicePowerStatus()!= undefined) &amp;&amp; (!$data.controllerDetailsModel.ControllerOverview.IsPowerConnectStatus())" style="display: none;">DisConnected</h5>
+                                                        <h5 class="gray bold" data-bind="visible: $data.controllerDetailsModel.ControllerOverview.DevicePowerStatus()=== undefined || $data.controllerDetailsModel.ControllerOverview.DevicePowerStatus()=== null ">Group Status</h5>
+                                                        <p class="s5" data-bind="text:$data.controllerDetailsModel.ControllerOverview.PowerStatusTime"></p>
+                                                        <p class="s5" data-bind="text:$data.controllerDetailsModel.ControllerOverview.PowerStatusDate"></p>
+                                                    </span>
+                                                </div>
+                                                <hr class="clear">
+                                                <div class="col-md-12 paddingLnone">
+                                                    <span class="ispicon pull-left ispicon_batteryDisabled" data-bind="css:$data.controllerDetailsModel.ControllerOverview.DisplayBetteryStatus"></span>
+                                                    <span class="pull-left connStatus">
+                                                        <span class="bold"> (Cell Provider Name) </span>
+                                                        <h5 class="green bold" data-bind="visible: ($data.controllerDetailsModel.ControllerOverview.DeviceBetteryStatus()!= undefined) &amp;&amp; ($data.controllerDetailsModel.ControllerOverview.IsBetteryNormalStatus())" style="display: none;">Normal</h5>
+                                                        <h5 class="red bold" data-bind="visible: ($data.controllerDetailsModel.ControllerOverview.DeviceBetteryStatus()!= undefined) &amp;&amp; (!$data.controllerDetailsModel.ControllerOverview.IsBetteryNormalStatus())" style="display: none;">Low</h5>
+                                                        <h5 class="gray bold" data-bind="visible: $data.controllerDetailsModel.ControllerOverview.DeviceBetteryStatus()=== undefined||$data.controllerDetailsModel.ControllerOverview.DeviceBetteryStatus()=== null">(Network)</h5>
+                                                        <p class="s5" data-bind="text:$data.controllerDetailsModel.ControllerOverview.BatteryStatusTime"></p>
+                                                        <p class="s5" data-bind="text:$data.controllerDetailsModel.ControllerOverview.BatteryStatusDate"></p>
+                                                    </span>
+                                                </div>
+                                                 <div class="col-md-6 paddingLnone">
+                                                    <span class="ispicon pull-left ispicon_acDisabled" data-bind="css:$data.controllerDetailsModel.ControllerOverview.DisplayPowerStatus"></span>
+                                                    <span class="pull-left connStatus">
+                                                        <span class="bold"> AC</span>
+                                                        <h5 class="green bold" data-bind="visible: ($data.controllerDetailsModel.ControllerOverview.DevicePowerStatus()!= undefined) &amp;&amp; ($data.controllerDetailsModel.ControllerOverview.IsPowerConnectStatus())" style="display: none;">Connected</h5>
+                                                        <h5 class="red bold" data-bind="visible: ($data.controllerDetailsModel.ControllerOverview.DevicePowerStatus()!= undefined) &amp;&amp; (!$data.controllerDetailsModel.ControllerOverview.IsPowerConnectStatus())" style="display: none;">DisConnected</h5>
+                                                        <h5 class="gray bold" data-bind="visible: $data.controllerDetailsModel.ControllerOverview.DevicePowerStatus()=== undefined || $data.controllerDetailsModel.ControllerOverview.DevicePowerStatus()=== null ">N/A</h5>
+                                                        <p class="s5" data-bind="text:$data.controllerDetailsModel.ControllerOverview.PowerStatusTime"></p>
+                                                        <p class="s5" data-bind="text:$data.controllerDetailsModel.ControllerOverview.PowerStatusDate"></p>
+                                                    </span>
+                                                </div>
+                                                <div class="col-md-6 paddingLnone">
+                                                    <span class="ispicon pull-left ispicon_batteryDisabled" data-bind="css:$data.controllerDetailsModel.ControllerOverview.DisplayBetteryStatus"></span>
+                                                    <span class="pull-left connStatus">
+                                                        <span class="bold"> Battery</span>
+                                                        <h5 class="green bold" data-bind="visible: ($data.controllerDetailsModel.ControllerOverview.DeviceBetteryStatus()!= undefined) &amp;&amp; ($data.controllerDetailsModel.ControllerOverview.IsBetteryNormalStatus())" style="display: none;">Normal</h5>
+                                                        <h5 class="red bold" data-bind="visible: ($data.controllerDetailsModel.ControllerOverview.DeviceBetteryStatus()!= undefined) &amp;&amp; (!$data.controllerDetailsModel.ControllerOverview.IsBetteryNormalStatus())" style="display: none;">Low</h5>
+                                                        <h5 class="gray bold" data-bind="visible: $data.controllerDetailsModel.ControllerOverview.DeviceBetteryStatus()=== undefined||$data.controllerDetailsModel.ControllerOverview.DeviceBetteryStatus()=== null">N/A</h5>
+                                                        <p class="s5" data-bind="text:$data.controllerDetailsModel.ControllerOverview.BatteryStatusTime"></p>
+                                                        <p class="s5" data-bind="text:$data.controllerDetailsModel.ControllerOverview.BatteryStatusDate"></p>
+                                                    </span>
+                                                </div>
+
+                                                 <div class="col-md-12 paddingLnone">
+                                                    <span class="ispicon pull-left ispicon_acDisabled" data-bind="css:$data.controllerDetailsModel.ControllerOverview.DisplayPowerStatus"></span>
+                                                    <span class="pull-left connStatus">
+                                                        <span class="bold"> Ethernet</span>
+                                                        <h5 class="green bold" data-bind="visible: ($data.controllerDetailsModel.ControllerOverview.DevicePowerStatus()!= undefined) &amp;&amp; ($data.controllerDetailsModel.ControllerOverview.IsPowerConnectStatus())" style="display: none;">Connected</h5>
+                                                        <h5 class="red bold" data-bind="visible: ($data.controllerDetailsModel.ControllerOverview.DevicePowerStatus()!= undefined) &amp;&amp; (!$data.controllerDetailsModel.ControllerOverview.IsPowerConnectStatus())" style="display: none;">DisConnected</h5>
+                                                        <h5 class="gray bold" data-bind="visible: $data.controllerDetailsModel.ControllerOverview.DevicePowerStatus()=== undefined || $data.controllerDetailsModel.ControllerOverview.DevicePowerStatus()=== null ">Status</h5>
+                                                        <p class="s5" data-bind="text:$data.controllerDetailsModel.ControllerOverview.PowerStatusTime"></p>
+                                                        <p class="s5" data-bind="text:$data.controllerDetailsModel.ControllerOverview.PowerStatusDate"></p>
+                                                    </span>
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                        <!-- CONTROLLER STATUS END-->
+                                    </div>
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</body>
+</html>
